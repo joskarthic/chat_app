@@ -878,8 +878,8 @@ iScroll.prototype = {
 		that.scroller.style[transform] = '';
 
 		// Remove the scrollbars
-		that.hScrollbar = false;
-		that.vScrollbar = false;
+		that.hScrollbar = true;
+		that.vScrollbar = true;
 		that._scrollbar('h');
 		that._scrollbar('v');
 
