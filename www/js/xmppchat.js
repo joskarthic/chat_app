@@ -356,6 +356,12 @@ function connectSuccess() {
 	var room_name = CHAT.roomJID.split('@')[0];
 	var sym = room_name.indexOf('_') + 1;
 	$('.room_name').text(room_name.slice(sym));
+	//$('.room_name').text(room_name.slice(sym));
+	alert(room_name);
+	
+	var dis_name = CHAT.getItem('login');
+	$('.dis_name').text(dis_name);
+	alert(dis_name);
 }
 
 function signup() {
