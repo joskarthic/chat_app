@@ -1,8 +1,8 @@
 //QB Account params
 var QBPARAMS = {
-	app_id      : 3907,
-	auth_key    : 'jRVze-6OzVDh-WX',
-	auth_secret : 'uX8dZDexGW8TrEe'
+	app_id      : 19101,
+	auth_key    : 'CFKVXVZDUt7dE-s',
+	auth_secret : 't3n7fr4pGKAhbC5'
 }
 
 //Chat params
