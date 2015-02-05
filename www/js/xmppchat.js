@@ -8,9 +8,9 @@
 
 var storage, login, password, full_name, email, params, qbUser, avatarLink, connection, userJID, html, occupants;
 
-//function authQB() {
-//	$('#buttons').hide().next('#qb_login_form').show().find('input').val('');
-//}
+function authQB() {
+	$('#buttons').hide().next('#qb_login_form').show().find('input').val('');
+}
 
 function userCreate() {
 	if ($('#qb_signup_form button').is('.disabled')) {
