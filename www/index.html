@@ -21,7 +21,7 @@
         
         <div id="wrap content" class="container">
 			<div id="auth">
-				<div class="logo" id="logo-group"><img src="img/logo@2x.png" alt="QuickBlox logo" /></div>
+				
 				<div class="welcome">Welcome to<br />QuickBlox Web XMPP Chat</div>
 				
 				<div id="buttons">
@@ -31,60 +31,104 @@
 				</div>
 				
 				<form id="qb_login_form" action="#">
-				    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" >
-					<div id="login_div" class=" well no-padding">
-					    <div id="login_form"   class="client-form smart-form">
-						
-						<fieldset>
-						    <section >
-							<label class="label">User name</label>
-							<label class="input">
-							    <input type="text" id="login" >
-							    <b class="tooltip tooltip-top-right">
-								<i class="fa fa-user txt-color-teal"></i> Please enter your username
-							    </b>
-							</label>
-						    </section>
-						    <section>
-							<label class="label">Password</label>
-							<label class="input">
-							    <input type="password" id="password" name="password">
-							    <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b>
-							</label>
-						    </section>
-						</fieldset>
-						<footer>
-						    <button onclick="sessionCreate(); return false;" class="btn btn-spine" >Connect</button>
-						    <!--<input  onclick="sessionCreate(); return false;" value='Sign in' type="submit" name="submit"  />-->
-						    <div class="row">
-							<section>
-							    <span>Not registered yet?<br />
-								<a href="#" id="signup">Register an account QuickBlox</a>
-							    </span> 
-							</section>
+				    <div id="content" class="container">
+					<div class="row">
+					    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" >
+					    </div>
+					    
+					    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" >
+						<div id="login_div" class=" well no-padding">
+						    <div id="login_form"   class="client-form smart-form">
+							<header>
+							    Sign In
+							</header>
+							<fieldset>
+							    <section >
+								<label class="input">
+								    <input type="text" id="login" >
+								</label>
+							    </section>
+							    <section class="col col-sm">
+								<label class="input">
+								    <input type="password" id="password" name="password">
+								</label>
+							    </section>
+							</fieldset>
+							<footer>
+							    <button onclick="sessionCreate(); return false;" class="btn btn-spine btn-sm-3" >Connect</button>
+							    <!--<input  onclick="sessionCreate(); return false;" value='Sign in' type="submit" name="submit"  />-->
+							    <div class="row">
+								<section>
+								    <span>Not registered yet?<br />
+									<a href="#" id="signup">Register an account QuickBlox</a>
+								    </span> 
+								</section>
+							    </div>
+							</footer>
 						    </div>
-									
-							    
-                               </footer>
-                               
-                            
-                               
-                              </div>
-                        </div>
-                    </div>
+						</div>
+					    </div>
+					</div>
+				    </div>
 				</form>
 				
 				<form id="qb_signup_form" action="#" enctype="multipart/form-data">
-					<p><input id="full_name_signup" type="text" placeholder="Full Name" /></p>
-					<p><input id="email_signup" type="text" placeholder="Email" /></p>
-					<p><input id="login_signup" type="text" placeholder="Login" /></p>
-					<p><input id="password_signup" type="text" placeholder="Password" /></p>
-					<div class="fileUpload">
-						<input id="avatar_signup" type="file" size="8" accept="image/*" />
-						<input class="fileName" type="text" placeholder="Avatar" />
-						<img src="img/upload_photo.png" alt="upload" />
+				    <div id="content" class="container">
+					<div class="row">
+					    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" >
+					    </div>
+					    
+					    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" >
+						<div id="login_div" class=" well no-padding">
+						    <div id="login_form"   class="client-form smart-form">
+							<header>
+							    Sign Up
+							</header>
+							<fieldset>
+							    <section >
+								
+								<label class="input">
+								    <input id="full_name_signup" type="text" placeholder="Full Name" />
+								</label>
+							    </section>
+								 <section >
+								
+								<label class="input">
+								   <input id="email_signup" type="text" placeholder="Email" />
+								</label>
+							    </section>
+								 <section >
+								
+								<label class="input">
+								  <input id="login_signup" type="text" placeholder="Login" />
+								</label>
+							    </section>
+							    <section>
+								<label class="input">
+								    <input id="password_signup" type="text" placeholder="Password" />
+								</label>
+							    </section>
+								<section>
+								
+								    <label class="input fileUpload">
+									<input id="avatar_signup" type="file" size="8" accept="image/*" />
+									<input class="fileName" type="text" placeholder="Avatar" />
+								    
+								    <img src="img/upload_photo.png" alt="upload" />
+								    </label>
+					
+								</section>
+							</fieldset>
+							<footer>
+							    <button onclick="userCreate(); return false;" class="btn btn-spine btn-sm">Submit</button>
+							    <!--<input  onclick="sessionCreate(); return false;" value='Sign in' type="submit" name="submit"  />-->
+							   
+							</footer>
+						    </div>
+						</div>
+					    </div>
 					</div>
-					<p><button onclick="userCreate(); return false;">Sign Up</button></p>
+				    </div>
 				</form>
 				
 				<span class="success_reg">Thanks for your registration!</span>
@@ -105,45 +149,42 @@
 			</div>
 			
 			<div id="chat">
-				
-				
-				
-				<div class="panel-heading col col-sm" style="background-color: #D5DCE2">
-                    <span class="glyphicon glyphicon-comment"></span> Chat
-                    <div class="btn-group pull-right">
-                        <button type="button" class="btn btn-spine btn-sm dropdown-toggle" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-chevron-down"></span>
-                        </button>
-                        <ul class="dropdown-menu slidedown">
-			    <li><div class="occupants">
+			    <div class="panel-heading col col-sm" style="background-color: #D5DCE2">
+				<span class="glyphicon glyphicon-comment"></span> Chat
+				<div class="btn-group pull-right">
+				    <button type="button" class="btn btn-spine btn-sm dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-chevron-down"></span>
+				    </button>
+				    <ul class="dropdown-menu slidedown">
+					<li>
+					    <div class="occupants">
 						<span class="number"></span>
 						<img src="img/icon_users.png" alt="users" />
-					</div></li>
-                            <li class="divider"></li>
-                            <li><a href="#" class="logout"><span class="glyphicon glyphicon-off"></span>
-                                Sign Out</a></li>
-                        </ul>
-                    </div>
-                </div>
-				
-				
-				
-				
-				
-				<div class="row">
-					<section class="chat-content "></section>
+					    </div>
+					</li>
+					<li class="divider"></li>
+					<li>
+					    <a href="#" class="logout">
+						<span class="glyphicon glyphicon-off"></span>
+						Sign Out
+					    </a>
+					</li>
+				    </ul>
 				</div>
+			    </div>
+			    <div class="row">
+				<section class="chat-content "></section>
+			    </div>
 				
-				<div class="panel-footer">
-                    <div class="input-group">
-					
-                        <input id="btn-input" type="text" class="message_field form-control input-sm" placeholder="Type your message here..." />
-                        <span class="input-group-btn">
-                            <button onclick="sendMesage()" class="btn btn-warning btn-sm" id="btn-chat" >
-                                Send</button>
-                        </span>
-                    </div>
-                </div>
+			    <div class="panel-footer">
+				<div class="input-group">
+				    <input id="btn-input" type="text" class="message_field form-control input-sm" placeholder="Type your message here..." />
+				    <span class="input-group-btn">
+					<button onclick="sendMesage()" class="btn btn-warning btn-sm" id="btn-chat" >Send
+					</button>
+				    </span>
+				</div>
+			    </div>
 			</div>
 		</div>
 	

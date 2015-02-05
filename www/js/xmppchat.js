@@ -269,7 +269,7 @@ function onMessage(stanza, room) {
   	time = new Date(time);
   }
   
-	html = '<div class="message-wrap panel-body">';
+	html = '<div class="message-wrap">';
 	html += ' <ul class="chat">';
 	html += ' <li class="left clearfix">';
 	html += ' <span class="chat-img pull-left">';

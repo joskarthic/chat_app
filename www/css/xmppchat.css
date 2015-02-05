@@ -52,7 +52,6 @@
 		position:relative;
 		height:100%;
 		text-align:center;
-		background:url('../img/bg-header.png') no-repeat;
 		-webkit-animation: slide-header-background 20s ease-in-out;
 		-webkit-animation-iteration-count: 1;
 		background-position: -514px 0; 
@@ -176,7 +175,7 @@
 				top:0;
 				left:0;
 				width:155px;
-				height:15px;
+				height:31px;
 				font-size:14px;
 			}
 			#qb_signup_form .fileUpload img {
