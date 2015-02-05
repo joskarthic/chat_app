@@ -12,6 +12,7 @@ function authQB() {
 	$('#buttons').hide().next('#qb_login_form').show().find('input').val('');
 }
 
+
 function userCreate() {
 	if ($('#qb_signup_form button').is('.disabled')) {
 		return false;

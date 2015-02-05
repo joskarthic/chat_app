@@ -38,6 +38,7 @@
 		bottom:0;
 		left:0;
 		margin:auto;
+		
 		overflow: hidden;
 		background: white;
 	}
@@ -68,8 +69,8 @@
 			padding-top:100px;
 		}
 			#auth .logo img {
-				width:130px;
-				height:130px;
+				width:auto;
+				height:auto;
 			}
 		#auth .welcome {
 			margin-bottom:30px;
@@ -91,7 +92,7 @@
 	#buttons,
 	#qb_login_form,
 	#qb_signup_form {
-		width:210px;
+		width:100%;
 		margin:0 auto;
 	}
 		#buttons button,
@@ -99,7 +100,8 @@
 		#qb_signup_form button {
 			display:block;
 			width:100%;
-			height:38px;
+			height:100%;
+			alignment-baseline: central;
 			font-size: 16px;
 			line-height: 24px;
 			color: #006DFF;
@@ -125,8 +127,8 @@
 	}
 		#qb_login_form input,
 		#qb_signup_form input[type="text"] {
-			width:194px;
-			height:22px;
+			width:auto;
+			height:auto;
 			padding:7px;
 			border:1px solid #dcdee3;
 			font-family: inherit;
@@ -217,6 +219,7 @@
 	#chat {
 		display:none;
 		height:100%;
+		width: 100%;
 	}
 		#chat .chat-header,
 		#chat .chat-footer {
@@ -230,7 +233,7 @@
 			top: 0;
 			width: 100%;
 			z-index: 1;
-			height: 55px;
+			height: 100px;
 			box-sizing: border-box;
 			opacity: .8;
 		}
