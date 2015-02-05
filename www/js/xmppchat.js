@@ -34,7 +34,7 @@ function userCreate() {
 	
 	if (tmp) {
 		params = {full_name: full_name.val(), email: email.val(), login: login.val(), password: password.val()};
-		alert(full_name.val());
+		
 		$('#qb_signup_form input').prop('disabled', true);
 		$('#qb_signup_form button').addClass('disabled');
 		$('#qb_signup_form').append('<img class="ajax-loader" src="images/ajax-loader.gif" alt="loader" />');
@@ -272,7 +272,7 @@ function onMessage(stanza, room) {
 	html += '<img class="avatar" src="' + avatar + '" alt="avatar" />';
 	html += '<div class="message">';
 	html += '<header><h4>' + user + '</h4></header>';
-	html += '<section >' + message + '</section>';
+	html += '<section>' + message + '</section>';
 	html += '<footer class="time">' + $.formatDateTime('M dd, yy hh:ii:ss', time) + '</footer>';
 	html += '</div></article>';
 	
@@ -358,8 +358,6 @@ function connectSuccess() {
 	$('.room_name').text(room_name.slice(sym));
 	//$('.room_name').text(room_name.slice(sym));
 	//alert(room_name);
-	//var full_name = CHAT.full_name_signup;
-	//var display_name = full_name.val();
 	
 	
 }
