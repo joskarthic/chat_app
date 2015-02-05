@@ -50,4 +50,22 @@
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" /> -->
     <access origin="*" />
     <content src="index.html" />
+	<account-settings>
+  <account-id type='integer'>
+    24099
+  </account-id>
+  <api-endpoint>
+   https://api.quickblox.com
+  </api-endpoint>
+  <chat-endpoint>
+    chat.quickblox.com
+  </chat-endpoint>
+  <turnserver-endpoint>
+    turnserver.quickblox.com
+  </turnserver-endpoint>
+  <s3-bucket-name>
+    qbprod
+  </s3-bucket-name>
+</account-settings>
+	
 </widget>
