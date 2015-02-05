@@ -7,7 +7,7 @@
         
         <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
         <!--<link rel="stylesheet" href="css/reset.css" />-->
-		<!--<link rel="stylesheet" href="css/xmppchat.css" />-->
+		<link rel="stylesheet" href="css/xmppchat.css" />
 		<!--<link rel="stylesheet" href="css/working.css" />-->
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -30,51 +30,17 @@
 					<p><button onclick="authTW()" style="display:none"><img src="img/login_twitter.png" alt="Sign in with Twitter" /></button></p>
 				</div>
 				
-				<form id="qb_login_form" action="#">
-				    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" >
-					<div id="login_div" class=" well no-padding">
-					    <div id="login_form"   class="client-form smart-form">
-						<header>
-						    Sign In
-						</header>
-						<fieldset>
-						    <section >
-							<label class="label">User name</label>
-							<label class="input">
-							    <input type="text" id="login" >
-							    <b class="tooltip tooltip-top-right">
-								<i class="fa fa-user txt-color-teal"></i> Please enter your username
-							    </b>
-							</label>
-						    </section>
-						    <section>
-							<label class="label">Password</label>
-							<label class="input">
-							    <input type="password" id="password" name="password">
-							    <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b>
-							</label>
-						    </section>
-						</fieldset>
-						<footer>
-						    <button onclick="sessionCreate(); return false;" class="btn btn-spine" >Connect</button>
-						    <!--<input  onclick="sessionCreate(); return false;" value='Sign in' type="submit" name="submit"  />-->
-						    <div class="row">
-							<section>
-							    <span>Not registered yet?<br />
-								<a href="#" id="signup">Register an account QuickBlox</a>
-							    </span> 
-							</section>
-						    </div>
-									
-							    
-                               </footer>
-                               
-                            
-                               
-                              </div>
-                        </div>
-                    </div>
+				
+				   <form id="qb_login_form" action="#">
+					<input id="login" type="text" placeholder="Login or Email" />
+					<p><input id="password" type="password" placeholder="Password" />
+					<p><button onclick="sessionCreate(); return false;">Connect</button><br />
+						<span>Not registered yet?<br />
+							<a href="#" id="signup">Register an account QuickBlox</a>
+						</span>
+					</p>
 				</form>
+				
 				
 				<form id="qb_signup_form" action="#" enctype="multipart/form-data">
 					<p><input id="full_name_signup" type="text" placeholder="Full Name" /></p>
