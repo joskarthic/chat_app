@@ -267,10 +267,16 @@
 		}
 			#chat .message-wrap {
 				opacity:0;
-				overflow:hidden;
+				
 				margin-bottom:7px;
 				padding:5px;
 			}
+			/*#chat .message-wrap {
+				opacity:0;
+				overflow:hidden;
+				margin-bottom:7px;
+				padding:5px;
+			}*/
             #chat .message-wrap:first-child {
                 margin-top: 68px;
             }
