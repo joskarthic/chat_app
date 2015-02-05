@@ -8,7 +8,10 @@
         <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
         <!--<link rel="stylesheet" href="css/reset.css" />-->
 		<link rel="stylesheet" href="css/xmppchat.css" />
+		<link rel="stylesheet" href="css/working.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		
         
         <title>Hello World</title>
         
@@ -28,35 +31,41 @@
 				</div>
 				
 				<form id="qb_login_form" action="#">
-<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" >
-                        <div id="login_div" class=" well no-padding">
-                            <div id="login_form"   class="client-form smart-form">
-                                <header>
-                                    Sign In
-                                </header>
-                                <fieldset>
-                                    <section >
-                                        <label class="label">User name</label>
-                                        <label class="input">
-										
-                                            <input type="text" id="login" >
-                                                <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter your username</b>
-                                        </label>
-                                    </section>
-                                    <section>
-                                        <label class="label">Password</label>
-                                        <label class="input">
-										
-                                            <input type="password" id="password" name="password"><b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b>
-                                        </label>
-                                    </section>
-                                </fieldset>
-                                <footer>
-                                    <input  onclick="sessionCreate(); return false;" value='Sign in' type="submit" name="submit" class="btn btn-spine" />
+				    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" >
+					<div id="login_div" class=" well no-padding">
+					    <div id="login_form"   class="client-form smart-form">
+						<header>
+						    Sign In
+						</header>
+						<fieldset>
+						    <section >
+							<label class="label">User name</label>
+							<label class="input">
+							    <input type="text" id="login" >
+							    <b class="tooltip tooltip-top-right">
+								<i class="fa fa-user txt-color-teal"></i> Please enter your username
+							    </b>
+							</label>
+						    </section>
+						    <section>
+							<label class="label">Password</label>
+							<label class="input">
+							    <input type="password" id="password" name="password">
+							    <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b>
+							</label>
+						    </section>
+						</fieldset>
+						<footer>
+						    <button  onclick="sessionCreate(); return false;"class="btn btn-spine">Sign In</button>
+						    <div class="row">
+							<section>
+							    <span>Not registered yet?<br/>
+								<a href="#" id="signup">Register an account QuickBlox</a>
+							    </span> 
+							</section>
+						    </div>
 									
-									<span>Not registered yet?<br />
-							<a href="#" id="signup">Register an account QuickBlox</a>
-						</span>
+							    
                                </footer>
                                
                             
@@ -81,8 +90,7 @@
 				
 				<span class="success_reg">Thanks for your registration!</span>
 				
-				<div class="powered">Powered by <a href="http://quickblox.com">QuickBlox</a></div>
-				<div class="version">v1.1.1</div>
+				
 			</div>
 			
 			<div id="connecting">
@@ -97,31 +105,111 @@
 				</p>
 			</div>
 			
-			<div id="chat"class="">
-				<header class="chat-header">
-				    <!--<h3 class="room_name"></h3>-->
-				    <h3 style=" display:block; float:left; line-height:0px;">Welcome</h3>
-				    <a href="#" class="logout">Logout</a>
-				</header>
+			<div id="chat">
+				
+				
+				
+				<div class="panel-heading col col-sm" style="background-color: #D5DCE2">
+                    <span class="glyphicon glyphicon-comment"></span> Chat
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-spine btn-sm dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </button>
+                        <ul class="dropdown-menu slidedown">
+			    <li><div class="occupants">
+						<span class="number"></span>
+						<img src="img/icon_users.png" alt="users" />
+					</div></li>
+                            <li class="divider"></li>
+                            <li><a href="#" class="logout"><span class="glyphicon glyphicon-off"></span>
+                                Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+				
+				
+				
+				
+				
 				<div class="row">
 					<section class="chat-content "></section>
 				</div>
-				<br/>
-				    <br/>
-					<br/>
-				<footer class="chat-footer">
-					<div class="send_message">
-						<input type="text" id="message" /><br>
-						<input class="message_field" type="text" placeholder="Enter message..." /><br>
-						<button class="btn btn-spine" onclick="sendMesage()">Send</button>
-					</div>
-					<div class="occupants">
-						<span class="number"></span>
-						<img src="img/icon_users.png" alt="users" />
-					</div>
-				</footer>
+				
+				<div class="panel-footer">
+                    <div class="input-group">
+					
+                        <input id="btn-input" type="text" class="message_field form-control input-sm" placeholder="Type your message here..." />
+                        <span class="input-group-btn">
+                            <button onclick="sendMesage()" class="btn btn-warning btn-sm" id="btn-chat" >
+                                Send</button>
+                        </span>
+                    </div>
+                </div>
 			</div>
 		</div>
+	
+	 <style type="text/css">
+			.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body
+{
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+ 
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+    </style>
         
         <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
         <script type="text/javascript" src="phonegap.js"></script>
@@ -134,7 +222,7 @@
 		<script src="js/jquery.formatDateTime.js"></script>
 		<script src="js/jquery.scrollTo-min.js"></script>
 		<script src="js/parseUri.js"></script>
-		
+		<script src="js/bootstrap.min.js"></script>
 		<script src="js/config.js"></script>
 		<script src="js/xmppchat.js"></script>
         

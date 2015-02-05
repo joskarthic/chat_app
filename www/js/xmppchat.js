@@ -269,13 +269,18 @@ function onMessage(stanza, room) {
   	time = new Date(time);
   }
   
-	html = '<article class="message-wrap">';
+	html = '<div class="message-wrap panel-body">';
+	html += ' <ul class="chat">';
+	html += ' <li class="left clearfix">';
+	html += ' <span class="chat-img pull-left">';
 	html += '<img class="avatar" src="' + avatar + '" alt="avatar" />';
-	html += '<div class="message">';
-	html += '<header><h4>' + user + '</h4></header>';
-	html += '<section>' + message + '</section>';
+	html += '</span>';
+	html += '<div class="message chat-body clearfix">';
+	html += ' <div class="header">';
+	html += '<strong class="primary-font">' + user + '</strong>';
+	html += '<p>' + message + '</p>';
 	html += '<footer class="time">' + $.formatDateTime('M dd, yy hh:ii:ss', time) + '</footer>';
-	html += '</div></article>';
+	html += '</div></div></li></ul></div>';
 	
 	$('.chat-content').append(html).find('.message-wrap:last').fadeTo(500, 1);
 	$('.chat-content').scrollTo('.message-wrap:last', 0);
